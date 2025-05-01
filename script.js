@@ -36,3 +36,19 @@ function createChip() {
 
 // Lanzar una ficha cada 250ms
 setInterval(createChip, 250);
+
+// Numeros
+
+document.addEventListener("DOMContentLoaded", () => {
+  const whatsappButton = document.getElementById("whatsapp-button");
+
+  const links = [
+    "https://wa.link/pu3jiq", // 011-7075-4211
+    "https://wa.link/7s8kzv", // ***-****-****
+    "https://wa.link/a4c1hj", // ***-****-****
+    "https://wa.link/r8m2yf" // ***-****-****
+  ];
+
+  const randomIndex = Math.floor(Math.random() * links.length);
+  whatsappButton.href = links[randomIndex];
+});
