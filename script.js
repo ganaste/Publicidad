@@ -49,6 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://wa.link/r8m2yf" // ***-****-****
   ];
 
+  
+
   const randomIndex = Math.floor(Math.random() * links.length);
   whatsappButton.href = links[randomIndex];
+
+  whatsappButton.addEventListener("click", () => {
+
+    gtag('event', 'click_whatsapp', {
+      event_category: 'engagement',
+      event_label: 'Botón WhatsApp',
+    });
+});
 });
